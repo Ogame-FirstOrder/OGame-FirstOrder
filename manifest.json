@@ -1,0 +1,37 @@
+{
+  "name": "Ogame FirstOrder",
+  "version": "1881",
+  "manifest_version": 2,
+  "description": "Bir İttifaktan Daha Fazlası FirstOrder!",
+  "homepage_url": "https://ogame.com.tr/",
+
+  "content_scripts": [
+    {
+      "exclude_matches": ["https://*.ogame.gameforge.com/game/admin2/*"],
+      "matches": ["https://*.ogame.gameforge.com/game/*"],
+      "js": ["main.js"],
+      "css": ["global.css"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": ["ogkush.js", "libs/*", "res/*", "util/*"],
+
+  "browser_action": {
+    "default_title": "Ogame FirstOrder",
+    "default_icon": {
+      "32": "res/firstorder32.png"
+    }
+  },
+
+  "icons": {
+    "32": "res/firstorder32.png",
+    "128": "res/firstorder128.png",
+    "256": "res/firstorder256.png",
+    "512": "res/firstorder512.png"
+  },
+  "permissions": ["storage", "https://*.ogame.gameforge.com/game/*"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
