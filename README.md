@@ -1,4 +1,6 @@
-# Ogame Infinity
+# Ogame Infinity to OGame-FirstOrder
+First author to develop : Aleks
+Author who continues to develop: Devrim Mehmet Pattabanoğlu
 
 This repository contains the monolithic code mess for the Ogame Infinity extension.
 It can be loaded as an unpacked extension to be tested locally.
