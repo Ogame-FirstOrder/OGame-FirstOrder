@@ -1,13 +1,16 @@
-# Ogame Infinity
+# Ogame Infinity to OGame-FirstOrder
+First author to develop : Aleks
+
+Author who continues to develop: Devrim Mehmet Pattabanoğlu
 
 This repository contains the monolithic code mess for the Ogame Infinity extension.
 It can be loaded as an unpacked extension to be tested locally.
 
 ## Downloads
 
-- Firefox: https://addons.mozilla.org/en-US/firefox/addon/ogame-infinity/
-- Chrome: https://chrome.google.com/webstore/detail/ogame-infinity/hfojakphgokgpbnejoobfamojbgolcbo
-- Edge: https://microsoftedge.microsoft.com/addons/detail/ogame-infinity/eejkmenlfccjjekgmcjkladejfhklgkm
+- Firefox: [https://addons.mozilla.org/en-US/firefox/addon/ogame-infinity/](https://addons.mozilla.org/tr/firefox/addon/ogame-firstorder/)
+- Chrome: [https://chrome.google.com/webstore/detail/ogame-infinity/hfojakphgokgpbnejoobfamojbgolcbo](https://chrome.google.com/webstore/detail/ogame-firstorder/noohklpcinihdlbhlfnbmdkndehpjckj)
+
 
 ### Third party dependencies
 

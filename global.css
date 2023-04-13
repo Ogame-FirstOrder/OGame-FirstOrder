@@ -318,7 +318,7 @@ input[type="password"]::selection {
 .ogk-logo {
   width: 175px;
   height: 71px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/logo-text.png");
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/logo-text.png");
   background-size: 175px;
 }
 
@@ -330,11 +330,11 @@ input[type="password"]::selection {
   height: 14px;
   cursor: pointer;
   background-repeat: no-repeat;
-  background-image: url("moz-extension://__MSG_@@extension_id__/res/notification.svg");
+  background-image: url("https://firstorder.com.tr/Ogame-Firstorder/res/notification.svg");
 }
 
 .ogl-notification.active {
-  background-image: url("moz-extension://__MSG_@@extension_id__/res/notification_active.svg");
+  background-image: url("https://firstorder.com.tr/Ogame-Firstorder/res/notification_active.svg");
 }
 
 .ogk-keep-dialog h1 {
@@ -683,7 +683,7 @@ input[type="password"]::selection {
   width: 27px;
   height: 27px;
   margin-left: 5px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/planet.png") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/planet.png") no-repeat left top;
   background-size: 25px 22px;
   margin-top: 4px;
   opacity: 0.6;
@@ -693,7 +693,7 @@ input[type="password"]::selection {
   width: 27px;
   height: 27px;
   margin-left: 5px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/moon.png") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/moon.png") no-repeat left top;
   background-size: 27px 24px;
   margin-top: 2px;
   margin-left: -1px;
@@ -704,7 +704,7 @@ input[type="password"]::selection {
   width: 27px;
   height: 27px;
   margin-left: 5px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/debris.gif") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/debris.gif") no-repeat left top;
   background-size: 20px 21px;
   margin-top: 5px;
   margin-left: 3px;
@@ -1102,13 +1102,13 @@ input[type="password"]::selection {
   top: 6px;
   left: 226px;
   background-size: 12px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/warning.gif") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/warning.gif") no-repeat left top;
 }
 
 .ogl-dest .ogl-coords .ogl-warning {
   width: 12px;
   height: 12px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/warning.gif") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/warning.gif") no-repeat left top;
   margin-right: 9px;
   margin-top: 1px;
 }
@@ -1292,7 +1292,7 @@ input[type="password"]::selection {
 }
 
 .select-most-min {
-  background: url("moz-extension://__MSG_@@extension_id__/res/select_most.gif") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/select_most.gif") no-repeat left top;
   display: inline-block;
   height: 11px;
   width: 14px;
@@ -1301,7 +1301,7 @@ input[type="password"]::selection {
 }
 
 .select-most {
-  background: url("moz-extension://__MSG_@@extension_id__/res/select_most.jpg") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/select_most.jpg") no-repeat left top;
   display: block;
   float: left;
   height: 32px;
@@ -1424,7 +1424,7 @@ input[type="file"] {
 }
 
 .ogl-syncOption {
-  background: url("moz-extension://__MSG_@@extension_id__/res/settings.png");
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/settings.png");
   background-position: 4px 4px;
   background-size: 15px;
   background-repeat: no-repeat;
@@ -3315,27 +3315,27 @@ button.build-it_premium:hover {
 }
 
 .ogl-overview-icon {
-  background: url("moz-extension://__MSG_@@extension_id__/res/menuicons.png") 161px -92px;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/menuicons.png") 161px -92px;
   background-size: calc(23px * 14) !important;
 }
 
 .ogl-statistics-icon {
-  background: url("moz-extension://__MSG_@@extension_id__/res/menuicons.png") 184px -92px;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/menuicons.png") 184px -92px;
   background-size: calc(23px * 14) !important;
 }
 
 .ogl-fleet-icon {
-  background: url("moz-extension://__MSG_@@extension_id__/res/menuicons.png") -92px -23px;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/menuicons.png") -92px -23px;
   background-size: calc(23px * 14) !important;
 }
 
 .ogl-search-icon {
-  background: url("moz-extension://__MSG_@@extension_id__/res/menuicons.png") 0 -24px;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/menuicons.png") 0 -24px;
   background-size: calc(23px * 14) !important;
 }
 
 .ogl-empire-icon {
-  background: url("moz-extension://__MSG_@@extension_id__/res/menuicons.png") -46px -24px;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/menuicons.png") -46px -24px;
   background-size: calc(23px * 14) !important;
 }
 
@@ -3984,7 +3984,7 @@ button.build-it_premium:hover {
   display: inline-block;
   height: 26px;
   padding-left: 26px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/uv-buttons.png") 0 -52px;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/uv-buttons.png") 0 -52px;
   background-position: 0 -52px;
 }
 
@@ -3996,7 +3996,7 @@ button.build-it_premium:hover {
   display: inline-block;
   height: 26px;
   width: 26px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/uv-buttons.png") 0 0;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/uv-buttons.png") 0 0;
   background-position: 0 0;
 }
 
@@ -7685,7 +7685,7 @@ li.resource {
 .choice-target.planet {
   width: 20px;
   height: 20px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/planet.png") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/planet.png") no-repeat left top;
   background-size: 20px 18px;
   opacity: 0.6;
 }
@@ -7693,7 +7693,7 @@ li.resource {
 .choice-target.moon {
   width: 20px;
   height: 20px;
-  background: url("moz-extension://__MSG_@@extension_id__/res/moon.png") no-repeat left top;
+  background: url("https://firstorder.com.tr/Ogame-Firstorder/res/moon.png") no-repeat left top;
   background-size: 24px 19px;
   background-position: -2px, 2px;
   opacity: 0.6;

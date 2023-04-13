@@ -2569,6 +2569,7 @@ class OGInfinity {
               that.createDOM("div", {}, `Lvl <strong>${toFormatedNumber(baseLvl)}</strong>`)
             );
             let lvlFromTo = titleDiv.appendChild(that.createDOM("div", {}, ""));
+            console.log("\n");
             titleDiv.appendChild(that.createDOM("div", {}, that.getTranslatedText(39)));
             let helpNode = document.querySelector(".txt_box .details").cloneNode(true);
             lock = infoDiv.appendChild(that.createDOM("a", { class: "icon icon_lock" }));
@@ -3162,25 +3163,25 @@ class OGInfinity {
   topBarUtilities() {
     let boardlink = `https://board.${this.gameLang}.ogame.gameforge.com/`;
     let bar = document.querySelector("#bar ul");
-    bar.appendChild(this.createDOM("li", {}, `<a href="${boardlink}" target="_blank">Board</a>`));
-    bar.appendChild(
+   /* bar.appendChild(this.createDOM("li", {}, `<a href="${boardlink}" target="_blank">Board</a>`));*/
+ /*   bar.appendChild(
       this.createDOM(
         "li",
         {},
         `<a href="https://proxyforgame.com/${this.gameLang}/ogame/calc/flight.php" target="_blank">Flight</a>`
       )
-    );
+    );*/
     bar.appendChild(
-      this.createDOM("li", {}, `<a href="https://trashsim.oplanet.eu/${this.univerviewLang}" target="_blank">Trash</a>`)
+      this.createDOM("li", {}, `<a href="https://trashsim.oplanet.eu/${this.univerviewLang}" target="_blank">TrashSim</a>`)
     );
-    bar.appendChild(
+  /*  bar.appendChild(
       this.createDOM(
         "li",
         {},
         `<a href="https://www.mmorpg-stat.eu/base.php?se=1&univers=_${this.universe}" target="_blank">Mmorpg</a>`
       )
-    );
-    bar.appendChild(this.createDOM("li", {}, `<a href="https://ptre.chez.gg/" target="_blank">PTRE</a>`));
+    );*/
+  /*  bar.appendChild(this.createDOM("li", {}, `<a href="https://firstorder.com.tr/" target="_blank">FirstOrder</a>`)); */
     let ping = window.performance.timing.domLoading - window.performance.timing.fetchStart;
     let colorClass = "friendly";
     if (ping > 400 && ping < 800) colorClass = "neutral";
@@ -3916,22 +3917,22 @@ class OGInfinity {
     var interval = Math.floor(seconds / 86400);
     let since = "";
     if (interval >= 1) {
-      since += interval + "d ";
+      since += interval + " gün ";
     }
     seconds = seconds % 86400;
     interval = Math.floor(seconds / 3600);
     if (interval >= 1) {
-      since += interval + "h ";
+      since += interval + " saat ";
     }
     seconds = seconds % 3600;
     interval = Math.floor(seconds / 60);
     if (interval >= 1 && since.indexOf("d") == -1) {
-      since += interval + "m";
+      since += interval + " dakika";
     }
     if (since == "") {
-      since = "Just now";
+      since = "şu an";
     } else {
-      since += " ago";
+      since += " önce";
     }
     return since;
   }
@@ -3994,12 +3995,12 @@ class OGInfinity {
     let head = container.appendChild(this.createDOM("div", { class: "ogk-header" }));
     head.appendChild(this.createDOM("h1", {}, "Welcome "));
     head.appendChild(this.createDOM("div", { class: "ogk-logo" }));
-    container.appendChild(this.createDOM("p", {}, "Ogame Infinity will hopefully bring some new joy playing OGame!"));
+    container.appendChild(this.createDOM("p", {}, "OGame FirstOrder, OGame oynarken size kolaylık sağlayacaktır!"));
     container.appendChild(
       this.createDOM(
         "p",
         {},
-        "<strong class='friendly'>Note</strong>: Ogame Infinity is now officially tolarated by Ogame! (<a href='https://board.en.ogame.gameforge.com/index.php?thread/819842-ogame-infinity-extension/' target='_blank'>Origin board</a>)."
+        "<strong class='friendly'>Not</strong>: OGame FirstOrder resmi olarak Ogame tarafından tolere edilmek için inceleme aşamasındadır!"
       )
     );
     if (!this.commander) {
@@ -4007,7 +4008,7 @@ class OGInfinity {
         this.createDOM(
           "p",
           { class: "neutral" },
-          "<strong>Reminder: </strong>The commander officier will bring improved empire features (seriously, try it :)."
+          "<strong>Hatırlatma: </strong>Komuta Heyeti, gelişmiş imparatorluk özellikleri getirecek(Subayları deneyin)."
         )
       );
     }
@@ -4015,7 +4016,9 @@ class OGInfinity {
       this.createDOM(
         "p",
         {},
-        "If you see a bug or have a feature request please report to discord 🙏 <a href='https://discord.gg/uWMGtcJYBb' target='_blank'>Link</a> also in the setting page. <span class='overmark'> Be advised that using multiple addons/script might generate conflicts. </span>"
+        
+        
+        "Bir hata görürseniz veya isteğiniz varsa lütfen discord'tan bildirin 🙏 ayrıca ayar sayfasındaki <a href='https://discord.gg/7xVDDYHcBM' target='_blank'>Discord</a>. <span class='overmark'> Birden çok eklenti kullanmanın çakışmalara yol açabileceğini unutmayın.Discord kullanmıyorsanız <a href='https://firstorder.com.tr/forum' target='_blank'>Forum</a> üzerindende bildirebilirsiniz."
       )
     );
     let shortcutsDiv = container.appendChild(
@@ -4054,32 +4057,32 @@ class OGInfinity {
     );
     ctrl.appendChild(ctrlKey);
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-option ogl-overview-icon" }));
-    keyHelp.appendChild(this.createDOM("div", {}, "Open the resources panel"));
+    keyHelp.appendChild(this.createDOM("div", {}, "Kaynaklar panelini aç"));
     keyHelp.appendChild(this.createDOM("div"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-option ogl-search-icon" }));
-    keyHelp.appendChild(this.createDOM("div", {}, "Open the player search"));
+    keyHelp.appendChild(this.createDOM("div", {}, "Oyuncu aramayı aç"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-keyboard" }, "f"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-option ogl-statistics-icon" }));
-    keyHelp.appendChild(this.createDOM("div", {}, "Open the statistics panel"));
+    keyHelp.appendChild(this.createDOM("div", {}, "İstatistik panelini aç"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-keyboard" }, "s"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-option ogl-empire-icon" }));
-    keyHelp.appendChild(this.createDOM("div", {}, "Open the empire view"));
+    keyHelp.appendChild(this.createDOM("div", {}, "İmparatorluk görünümünü aç"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-keyboard" }, "e"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-option ogl-targetIcon" }));
-    keyHelp.appendChild(this.createDOM("div", {}, "Open the target list"));
+    keyHelp.appendChild(this.createDOM("div", {}, "Hedef listesini aç"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-keyboard" }, "d"));
     keyHelp.appendChild(this.createDOM("div", { class: "ogl-option ogl-syncOption" }));
-    keyHelp.appendChild(this.createDOM("div", {}, "Settings"));
+    keyHelp.appendChild(this.createDOM("div", {}, "Ayarlar"));
     container.appendChild(
       this.createDOM(
         "p",
         { class: "ogk-thanks" },
-        "Finally, let's thanks <strong>Mr NullNan</strong> for the initial work!"
+        "Son olarak <strong>Mr NullNan and Aleks ve Ogame Infinity</strong> ailesine teşekkürler!"
       )
     );
     let heart =
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path style="fill:#C80909" d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>';
-    container.appendChild(this.createDOM("div", { class: "ogk-love" }, "Made isolated with " + heart + "in Paris"));
+    container.appendChild(this.createDOM("div", { class: "ogk-love" }, "Made isolated with " + heart + "in Paris and Istanbul"));
     this.popup(null, container);
   }
 
@@ -4186,7 +4189,7 @@ class OGInfinity {
         class: "ogl-warning-dialog overmark",
         style: "padding: 25px",
       },
-      `<div class="premium">\n      <div class="officers100  commander">\n            <a href="https://s${this.universe}-${this.gameLang}.ogame.gameforge.com/game/index.php?page=premium&openDetail=2" class="detail_button">\n              <span class="ecke">\n                  <span class="level">\n                      <img src="https://gf3.geo.gfsrv.net/cdnbc/aa2ad16d1e00956f7dc8af8be3ca52.gif" width="12" height="11">\n                  </span>\n              </span>\n          </a>\n      </div>\n    </div>\n    The commander officier is required for these features...`
+      `<div class="premium">\n      <div class="officers100  commander">\n            <a href="https://s${this.universe}-${this.gameLang}.ogame.gameforge.com/game/index.php?page=premium&openDetail=2" class="detail_button">\n              <span class="ecke">\n                  <span class="level">\n                      <img src="https://gf3.geo.gfsrv.net/cdnbc/aa2ad16d1e00956f7dc8af8be3ca52.gif" width="12" height="11">\n                  </span>\n              </span>\n          </a>\n      </div>\n    </div>\n    Bu özellikler için komutan subayı gerekir...`
     );
     this.popup(null, content);
   }
@@ -4240,7 +4243,7 @@ class OGInfinity {
     this.searchOpened = false;
     targetList.addEventListener("click", () => {
       if (this.searchOpened) {
-        this.playerSearch(false);
+        this.playerSearch(true);
         this.searchOpened = false;
         search.classList.remove("ogl-active");
       }
@@ -4566,25 +4569,25 @@ class OGInfinity {
     );
     globalInfo.appendChild(this.createDOM("h2", {}, toFormatedNumber(parseInt(player.points.position))));
     globalInfo.appendChild(
-      this.createDOM("h3", {}, toFormatedNumber(parseInt(player.points.score)) + "<small> pts</small>")
+      this.createDOM("h3", {}, toFormatedNumber(parseInt(player.points.score)) + "<small> Puan</small>")
     );
     let detailRank = globalInfo.appendChild(this.createDOM("div", { class: "ogl-detailRank" }));
     detailRank.html(
       `\n          <div><div class="ogl-ecoIcon"></div>${toFormatedNumber(
         parseInt(player.economy.score)
-      )} <small>pts</small><span class="ogl-ranking">#${parseInt(
+      )} <small>Puan</small><span class="ogl-ranking">#${parseInt(
         player.economy.position
       )} </span></div>\n          <div><div class="ogl-techIcon"></div>${toFormatedNumber(
         parseInt(player.research.score)
-      )} <small>pts</small><span class="ogl-ranking">#${parseInt(
+      )} <small>Puan</small><span class="ogl-ranking">#${parseInt(
         player.research.position
       )} </span></div>\n          <div><div class="ogl-fleetIcon"></div>${toFormatedNumber(
         parseInt(player.military.score)
-      )} <small>pts</small><span class="ogl-ranking">#${toFormatedNumber(
+      )} <small>Puan</small><span class="ogl-ranking">#${toFormatedNumber(
         parseInt(player.military.position)
       )} </span></div>\n          <div><div class="ogl-fleetIcon grey"></div>${toFormatedNumber(
         parseInt(player.def)
-      )} <small>pts</small></div>\n          `
+      )} <small>Puan</small></div>\n          `
     );
     let details = content.appendChild(this.createDOM("div", { class: "ogk-details" }));
     let ecoDetail = details.appendChild(this.createDOM("div", { class: "ogk-box" }));
@@ -4913,7 +4916,7 @@ class OGInfinity {
                                 <div>
                                     <div><b class="ogl_fleet"><i class="material-icons">military_tech</i>${this.formatToUnits(
                                       result.top_sr_fleet_points
-                                    )} pts</b></div>
+                                    )} Puan</b></div>
                                     <div><b>${new Date(result.top_sr_timestamp * 1000).toLocaleDateString(
                                       "fr-FR"
                                     )}</b></div>
@@ -5066,7 +5069,7 @@ class OGInfinity {
                     this.createDOM(
                       "div",
                       { class: "ogl-unknown-warning" },
-                      `${this.getTranslatedText(112)} <a href='https://discord.gg/uWMGtcJYBb'> ${this.getTranslatedText(
+                      `${this.getTranslatedText(112)} <a href='https://discord.gg/7xVDDYHcBM'> ${this.getTranslatedText(
                         113
                       )}</a>`
                     )
@@ -5144,7 +5147,7 @@ class OGInfinity {
                   this.createDOM(
                     "div",
                     { class: "ogl-unknown-warning" },
-                    `${this.getTranslatedText(112)} <a href='https://discord.gg/uWMGtcJYBb'> ${this.getTranslatedText(
+                    `${this.getTranslatedText(112)} <a href='https://discord.gg/7xVDDYHcBM'> ${this.getTranslatedText(
                       113
                     )}</a>`
                   )
@@ -6620,23 +6623,23 @@ class OGInfinity {
           Number(player.points.score),
           null,
           true
-        )} <small>pts</small></div>\n          <div><div class="ogl-ecoIcon"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n          <div><div class="ogl-ecoIcon"></div> ${toFormatedNumber(
           Number(player.economy.score),
           null,
           true
-        )} <small>pts</small></div>\n          <div><div class="ogl-techIcon"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n          <div><div class="ogl-techIcon"></div> ${toFormatedNumber(
           Number(player.research.score),
           null,
           true
-        )} <small>pts</small></div>\n          <div><div class="ogl-fleetIcon"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n          <div><div class="ogl-fleetIcon"></div> ${toFormatedNumber(
           Number(player.military.score),
           null,
           true
-        )} <small>pts</small></div>\n          <div><div class="ogl-fleetIcon grey"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n          <div><div class="ogl-fleetIcon grey"></div> ${toFormatedNumber(
           Number(player.def),
           null,
           true
-        )} <small>pts</small></div>\n          <div><div class="ogl-fleetIcon orange"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n          <div><div class="ogl-fleetIcon orange"></div> ${toFormatedNumber(
           Number(player.military.ships),
           null,
           true
@@ -6741,7 +6744,7 @@ class OGInfinity {
           searchResult.appendChild(this.createDOM("div", { style: "text-align: center;" }, "No results..."));
         }
       } else {
-        searchResult.appendChild(this.createDOM("div", { class: "historic" }, "Historic"));
+        searchResult.appendChild(this.createDOM("div", { class: "historic" }, "Takip"));
         updatePlayerList(this.json.searchHistory.slice().reverse());
       }
     };
@@ -6756,7 +6759,7 @@ class OGInfinity {
       $(".ogl-search-result").mCustomScrollbar({ theme: "ogame" });
       searchResult = document.querySelector(".ogl-search-content .mCSB_container");
     }, 200);
-    searchResult.appendChild(this.createDOM("div", { class: "historic" }, "Historic"));
+    searchResult.appendChild(this.createDOM("div", { class: "historic" }, "Takip"));
     updatePlayerList(this.json.searchHistory.slice().reverse());
     if (name) {
       updateSearch(name, false, true);
@@ -12310,27 +12313,27 @@ class OGInfinity {
           player.points.score,
           null,
           true
-        )} <small>pts</small></div>\n      <div><div class="ogl-ecoIcon"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n      <div><div class="ogl-ecoIcon"></div> ${toFormatedNumber(
           player.economy.score,
           null,
           true
-        )} <small>pts</small></div>\n      <div><div class="ogl-techIcon"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n      <div><div class="ogl-techIcon"></div> ${toFormatedNumber(
           player.research.score,
           null,
           true
-        )} <small>pts</small></div>\n      <div><div class="ogl-fleetIcon"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n      <div><div class="ogl-fleetIcon"></div> ${toFormatedNumber(
           player.military.score,
           null,
           true
-        )} <small>pts</small></div>\n      <div><div class="ogl-fleetIcon grey"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n      <div><div class="ogl-fleetIcon grey"></div> ${toFormatedNumber(
           player.def,
           null,
           true
-        )} <small>pts</small></div>\n      <div><div class="ogl-fleetIcon orange"></div> ${toFormatedNumber(
+        )} <small>Puan</small></div>\n      <div><div class="ogl-fleetIcon orange"></div> ${toFormatedNumber(
           player.military.ships,
           null,
           true
-        )} <small>ships</small></div>`
+        )} <small>Gemi.</small></div>`
       );
     };
     if (isNaN(Number(player))) {
@@ -12541,7 +12544,7 @@ class OGInfinity {
         actBtn = sideStalk.appendChild(
           this.createDOM("a", { class: "ogl-text-btn material-icons", title: "" }, "warning")
         );
-        if (this.json.options.ptreTK) {
+      /*  if (this.json.options.ptreTK) {
           ptreBtn = sideStalk.appendChild(
             this.createDOM(
               "a",
@@ -12552,13 +12555,13 @@ class OGInfinity {
               "PTRE"
             )
           );
-        }
+        }*/
         let closeBtn = sideStalk.appendChild(
           this.createDOM(
             "span",
             {
               class: "ogl-text-btn material-icons ogi-sideStalk-minBtn",
-              title: "Minimize",
+              title: "Küçült",
             },
             "close_fullscreen"
           )
@@ -12616,7 +12619,7 @@ class OGInfinity {
           watchlistBtn.addEventListener("click", () => {
             sideStalk.empty();
             sideStalk.appendChild(
-              this.createDOM("div", { class: "title" }, "Historic " + this.json.sideStalk.length + "/10")
+              this.createDOM("div", { class: "title" }, "Takip " + this.json.sideStalk.length + "/10")
             );
             sideStalk.appendChild(this.createDOM("hr"));
             this.json.sideStalk
@@ -15077,7 +15080,7 @@ class OGInfinity {
             en: "Computer Technology",
             es: "Tecnología de computación",
             fr: "Technologie Ordinateur",
-            tr: "Bilgisayar Teknolojisi",
+            tr: "Bilgisayar Tekniği",
           },
           109: {
             de: "Waffentechnik",
@@ -15119,21 +15122,21 @@ class OGInfinity {
             en: "Combustion Drive",
             es: "Motor de combustión",
             fr: "Réacteur à combustion",
-            tr: "Yanma Sürücüsü",
+            tr: "Yanma motoru",
             },
             117: {
             de: "Impulstriebwerk",
             en: "Impulse Drive",
             es: "Motor de impulso",
             fr: "Réacteur à impulsion",
-            tr: "İmpuls Sürücüsü",
+            tr: "İtki motoru",
             },
             118: {
             de: "Hyperraumantrieb",
             en: "Hyperspace Drive",
             es: "Propulsor hiperespacial",
             fr: "Propulsion hyperespace",
-            tr: "Hiperuzay Sürücüsü",
+            tr: "Hiperuzay iticisi",
             },
             120: {
             de: "Lasertechnik",
@@ -15196,14 +15199,14 @@ class OGInfinity {
                 en: "Light Fighter",
                 es: "Cazador ligero",
                 fr: "Chasseur léger",
-                tr: "Hafif Savaşçı",
+                tr: "Hafif Avcı",
                 },
                 205: {
                 de: "Schwerer Jäger",
                 en: "Heavy Fighter",
                 es: "Cazador pesado",
                 fr: "Chasseur lourd",
-                tr: "Ağır Savaşçı",
+                tr: "Ağır Avcı",
                 },
                 206: {
                 de: "Kreuzer",
@@ -15217,7 +15220,7 @@ class OGInfinity {
                 en: "Battleship",
                 es: "Nave de batalla",
                 fr: "Vaisseau de bataille",
-                tr: "Savaş Gemisi",
+                tr: "Komuta Gemisi",
                 },
                 208: {
                 de: "Kolonieschiff",
@@ -15294,7 +15297,7 @@ class OGInfinity {
                     en: "Pathfinder",
                     es: "Explorador",
                     fr: "Éclaireur",
-                    tr: "Iz Sürücü",
+                    tr: "Rehber",
                     },
                     401: {
                     de: "Raketenwerfer",
@@ -15482,35 +15485,35 @@ class OGInfinity {
         en: "Points #1",
         es: "Puntos #1",
         fr: "Point #1",
-        tr: "Puanlar #1",
+        tr: "1.Oyuncunun Puanı",
         },
         /*11*/ {
         de: "Öko Geschwindigkeit",
         en: "Eco Speed",
         es: "Velocidad economía",
         fr: "Vitesse éco",
-        tr: "Eko Hızı",
+        tr: "Ekonomi Hızı",
         },
         /*12*/ {
         de: "Flottengeschwindigkeit (feindlich)",
         en: "Fleet speed (war)",
         es: "Velocidad de flota (guerra)",
         fr: "Vitesse de flotte (guerre)",
-        tr: "Filo Hızı (savaş)",
+        tr: "Saldırı Filo Hızı",
         },
         /*13*/ {
             de: "Flottengeschwindigkeit (friedlich)",
             en: "Fleet speed (peaceful)",
             es: "Velocidad de flota (pacífica)",
             fr: "Vitesse de flotte (paisible)",
-            tr: "Filo Hızı (barışçıl)",
+            tr: "Barışçıl Filo Hızı",
             },
             /*14*/ {
             de: "Flottengeschwindigkeit (halten)",
             en: "Fleet speed (hoding)",
             es: "Velocidad de flota (mantener)",
             fr: "Vitesse de la flotte (en attente)",
-            tr: "Filo Hızı (beklemede)",
+            tr: "Durma Filo Hızı",
             },
             /*15*/ {
             de: "Datenverwaltung",
@@ -15658,7 +15661,7 @@ de: "Rentabilitätswert",
 en: "Rentability value",
 es: "Valor de rentabilidad",
 fr: "Valeur de rentabilité",
-tr: "Kârlılık değeri",
+tr: "Amortisman değeri",
 },
 /*36*/ {
 de: "Uhren auf die lokale Zeitzone umstellen",
@@ -15700,14 +15703,14 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
             en: "Expeditions",
             es: "Expediciones",
             fr: "Expéditions",
-            tr: "Keşif seferleri",
+            tr: "Keşif",
           },
           /*42*/ {
             de: "Planet(en)",
             en: "planet(s)",
             es: "planeta(s)",
             fr: "planète(s)",
-            tr: "gezegen(ler)",
+            tr: "Gezegen",
           },
           /*43*/ {
             de: "Ankunft",
@@ -15742,7 +15745,7 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
             en: "Cargo Capacity",
             es: "Capacidad de carga",
             fr: "Fret",
-            tr: "Kargo kapasitesi",
+            tr: "Nakliye Kapasitesi",
           },
           /*48*/ {
             de: "Geschwindigkeit",
@@ -15834,21 +15837,21 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
       en: "Hour",
       es: "Hora",
       fr: "Heure",
-      tr: "Saat",
+      tr: "Saatlik Üretim",
     },
     /*61*/ {
       de: "Tag",
       en: "Day",
       es: "Día",
       fr: "Jour",
-      tr: "Gün",
+      tr: "Günlük Üretim",
     },
     /*62*/ {
       de: "Woche",
       en: "Week",
       es: "Semana",
       fr: "Semaine",
-      tr: "Hafta",
+      tr: "Haftalık Üretim",
     },
 
            /*63*/ {
@@ -15863,14 +15866,14 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
       en: "ships",
       es: "naves",
       fr: "navires",
-      tr: "gemiler",
+      tr: "Gemi.",
     },
     /*65*/ {
       de: "Recycling",
       en: "Recycling",
       es: "Reciclaje",
       fr: "Recyclage",
-      tr: "Geridönüşüm",
+      tr: "GD Kapasitesi",
     },
     /*66*/ {
       de: "Für diese Funktionen ist der Commander erforderlich ...",
@@ -15905,21 +15908,21 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
       en: "Fuel",
       es: "Combustible",
       fr: "Carburant",
-      tr: "Yakıt",
+      tr: "Harcanan Deu",
     },
     /*71*/ {
       de: "S. Loch",
       en: "B. Hole",
       es: "Agujero negro",
       fr: "Trou noir",
-      tr: "K. Delik",
+      tr: "Karanlık Madde",
     },
     /*72*/ {
       de: "Beste Kämpfe",
       en: "Best combats",
       es: "Mejores combates",
       fr: "Meilleurs combats",
-      tr: "En iyi çatışmalar",
+      tr: "En iyi Savaşlar",
     },
     /*73*/ {
       de: "Name",
@@ -16018,21 +16021,21 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
       en: "Combat",
       es: "Combate",
       fr: "Combat",
-      tr: "Savaş",
+      tr: "Savaş Araştırmaları",
     },
     /*87*/ {
       de: "Antrieb",
       en: "Drive",
       es: "Propulsión",
       fr: "Propulsion",
-      tr: "Sürücü",
+      tr: "Sürüş Araştırmaları",
     },
     /*88*/ {
       de: "Empfohlene Weiterentwicklung",
       en: "Recommended further development",
       es: "Desarrollo posterior recomendado",
       fr: "Développement ultérieur recommandé",
-      tr: "Tavsiye edilen ileri geliştirme",
+      tr: "Tavsiye edilen ileri geliştirme (Amortisman Hesabı)",
     },
     /*89*/ {
       de: "Verteidigung",
@@ -16060,7 +16063,7 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
       en: "Combats",
       es: "Combates",
       fr: "Combat",
-      tr: "Çatışmalar",
+      tr: "Savaşlar",
     },
        /*93*/ {
         de: "Astro",
@@ -16074,14 +16077,14 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
         en: "Computer",
         es: "Computación",
         fr: "Ordinateur",
-        tr: "Bilgisayar",
+        tr: "Bilgisayar T.",
       },
       /*95*/ {
         de: "Hyperraum",
         en: "Hyperspace",
         es: "Hiperespacio",
         fr: "Hyperespace",
-        tr: "Hiperuzay",
+        tr: "Hiperuzay T.",
       },
       /*96*/ {
         de: "Plasma",
@@ -16257,7 +16260,7 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
         en: "Profitability",
         es: "Rentabilidad",
         fr: "Rentabilité",
-        tr: "Kârlılık",
+        tr: "Amortisman",
       },
  
         /*121*/ {
@@ -16350,7 +16353,7 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
                 en: "Contribute or bug report",
                 es: "Contribuir o reportar errores",
                 fr: "Contribuer ou signaler un bogue",
-                tr: "Katkıda bulunun veya hata bildirin",
+                tr: "Katkıda bulunun veya hata bildirin ",
                 },
                 /*134*/ {
                 de: "Flottenaktivität der Planeten anzeigen",
@@ -16435,15 +16438,23 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
       class: "ogl-dialogContainer ogl-settings",
     });
     let dataDiv = container.appendChild(this.createDOM("div", {}));
+    
+    dataDiv.appendChild(
+        this.createDOM(
+          "div",
+          { },
+          `<center><a href="https://firstorder.com.tr" target="_blank" style="color:red">OGame FirstOrder</a></center>`
+        )
+      );
     dataDiv.appendChild(this.createDOM("div", { class: "ogk-logo" }));
-
+   
     dataDiv.appendChild(
       this.createDOM(
         "div",
         { class: "ogi-checkbox" },
         `<strong class="undermark">${this.getTranslatedText(
           133
-        )}</strong>\n        <a target="_blank" href="https://discord.gg/uWMGtcJYBb"> Discord </span>`
+        )}</strong>\n        <a target="_blank" href="https://discord.gg/7xVDDYHcBM"> Discord </span>`
       )
     );
     // dataDiv.appendChild(
@@ -16823,7 +16834,7 @@ tr: "Şu anda uçuşta olan filonun yüzdesi",
 
     settingDiv.appendChild(this.createDOM("hr"));
 
-    optiondiv = settingDiv.appendChild(this.createDOM("span", {}, "Default expedition time"));
+    optiondiv = settingDiv.appendChild(this.createDOM("span", {}, "Varsayılan Keşif Süresi"));
     let expeditionDefaultTime = optiondiv.appendChild(
       this.createDOM("input", {
         type: "text",
